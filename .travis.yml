@@ -1,13 +1,12 @@
 language: go
 go:
-- 1.12.x
+- 1.13.x
 - master
 env:
 - GO111MODULE=on
-before_install:
-- go get github.com/mattn/goveralls
 install: true
 script:
-- make test-cover
-- goveralls -coverprofile=cover.out -service=travis-ci
-- make build
+  - make test-cover
+  - make build
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

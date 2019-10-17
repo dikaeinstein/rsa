@@ -1,6 +1,6 @@
 ## Run tests with coverage
 test-cover:
-	GO111MODULE=on go test -coverprofile=cover.out -race -v ./...
+	GO111MODULE=on go test -coverprofile=cover.txt -race -v ./...
 
 ## Run tests
 test:
