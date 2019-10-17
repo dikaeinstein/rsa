@@ -2,10 +2,6 @@ language: go
 go:
 - 1.12.x
 - master
-os:
-- osx
-osx_image: xcode10.1
-dist: trusty
 env:
 - GO111MODULE=on
 before_install:
